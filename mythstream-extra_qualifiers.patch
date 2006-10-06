@@ -1,0 +1,26 @@
+diff -urN mythstream-0.17/libs/configelements.h mythstream-0.17.new/libs/configelements.h
+--- mythstream-0.17/libs/configelements.h	2006-06-08 12:20:20.000000000 +0200
++++ mythstream-0.17.new/libs/configelements.h	2006-10-06 11:17:38.000000000 +0200
+@@ -183,8 +183,8 @@
+ 
+     void buildGroup(int boxes);
+     void setStatus(Status stat);
+-    QLabel* EditGroup::getLabel(QString name);
+-    MythLineEdit* EditGroup::getLineEdit(QString name);
++    QLabel* getLabel(QString name);
++    MythLineEdit* getLineEdit(QString name);
+ 
+     int boxCount;
+ 
+diff -urN mythstream-0.17/libs/streamconfig.h mythstream-0.17.new/libs/streamconfig.h
+--- mythstream-0.17/libs/streamconfig.h	2006-06-08 12:07:22.000000000 +0200
++++ mythstream-0.17.new/libs/streamconfig.h	2006-10-06 11:18:06.000000000 +0200
+@@ -93,7 +93,7 @@
+     ConfigButton *overwriteButton;
+ 
+     // Helpers
+-    bool StorageGroup::getStorageValuesByName(ValueList& values, const QString& storageName);
++    bool getStorageValuesByName(ValueList& values, const QString& storageName);
+ 
+     // GUI
+     void buildGroup();
