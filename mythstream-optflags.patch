@@ -1,0 +1,11 @@
+--- mythstream/mythstream.pro.orig	2006-07-09 23:47:46.000000000 +0200
++++ mythstream/mythstream.pro	2006-10-06 11:27:25.000000000 +0200
+@@ -1,7 +1,7 @@
+ include ( ../settings.pro )
+ 
+ TEMPLATE = lib
+-CONFIG += plugin thread warn_on debug
++CONFIG += plugin thread warn_on release
+ TARGET = mythstream
+ DEFINES += TARGET=\"$${TARGET}\"
+ SUBPATH = mythtv/mythstream
