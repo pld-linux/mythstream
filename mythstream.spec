@@ -1,12 +1,16 @@
 Summary:	Stream player for Mythtv
 Summary(pl):	Odtwarzacz strumieni dla Mythtv
 Name:		mythstream
-Version:	0.16_5
+%define		_ver		0.17
+%define		_subver		1
+Version:	%{_ver}_%{_subver}
 Release:	0.1
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://home.kabelfoon.nl/~moongies/sw9vc4htz2/%{name}-v%{version}.tar.gz
-# Source0-md5:	c0ec4451bfd959eba9d4eaedfa2dddb0
+# Source0-md5:	a025953c42023eeeb745c6c90af250ff
+Patch0:		%{name}-extra_qualifiers.patch
+Patch1:		%{name}-optflags.patch
 URL:		http://home.kabelfoon.nl/~moongies/streamtuned.html
 BuildRequires:	kdelibs-devel
 Requires:	mplayer
@@ -22,7 +26,9 @@ MythStream jest nieoficjaln± wtyczk± do MythTv. Odtwarza strumienie
 d¼wiêku i obrazu wykorzystuj±c mplayera.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{_ver}
+%patch0 -p1
+%patch1 -p0
 
 cp %{_datadir}/mythtv/build/config.mak .
 sed -i -e "1iinclude(`pwd`/config.mak)"  settings.pro
