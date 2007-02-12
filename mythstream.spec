@@ -1,5 +1,5 @@
 Summary:	Stream player for Mythtv
-Summary(pl):	Odtwarzacz strumieni dla Mythtv
+Summary(pl.UTF-8):   Odtwarzacz strumieni dla Mythtv
 Name:		mythstream
 %define		_ver		0.17
 %define		_subver		1
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 MythStream is an unofficial plugin for MythTv. It plays audio and
 video streams using mplayer as backend.
 
-%description -l pl
-MythStream jest nieoficjaln± wtyczk± do MythTv. Odtwarza strumienie
-d¼wiêku i obrazu wykorzystuj±c mplayera.
+%description -l pl.UTF-8
+MythStream jest nieoficjalnÄ… wtyczkÄ… do MythTv. Odtwarza strumienie
+dÅºwiÄ™ku i obrazu wykorzystujÄ…c mplayera.
 
 %prep
 %setup -q -n %{name}-%{_ver}
