@@ -1,5 +1,5 @@
 Summary:	Stream player for Mythtv
-Summary(pl.UTF-8):   Odtwarzacz strumieni dla Mythtv
+Summary(pl.UTF-8):	Odtwarzacz strumieni dla Mythtv
 Name:		mythstream
 %define		_ver		0.17
 %define		_subver		1
