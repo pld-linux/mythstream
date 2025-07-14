@@ -27,8 +27,8 @@ dźwięku i obrazu wykorzystując mplayera.
 
 %prep
 %setup -q -n %{name}-%{_ver}
-%patch0 -p1
-%patch1 -p0
+%patch -P0 -p1
+%patch -P1 -p0
 
 cp %{_datadir}/mythtv/build/config.mak .
 sed -i -e "1iinclude(`pwd`/config.mak)"  settings.pro
